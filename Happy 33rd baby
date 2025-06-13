@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>33 Reasons Why I Love You</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .slide h1, .slide h2 {
+      margin: 0 0 20px;
+      text-align: center;
+      color: #e91e63;
+    }
+    .slide p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      max-width: 600px;
+      text-align: center;
+    }
+    .nav {
+      position: fixed;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .nav button {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #e91e63;
+      cursor: pointer;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="slides-container">
+    <!-- Cover Slide -->
+    <section class="slide">
+      <h1>33 Reasons Why I Love You</h1>
+      <h2>Happy Birthday, My Love 💘</h2>
+    </section>
+
+    <!-- Slides for 33 reasons -->
+    <section class="slide"><p>1. You make me feel safe, no matter where you are.</p></section>
+    <section class="slide"><p>2. You listen—not just with your ears, but with your heart.</p></section>
+    <section class="slide"><p>3. You speak to me gently, even when I’m not gentle with myself.</p></section>
+    <section class="slide"><p>4. You’re always eager to talk to me, and I never feel like a burden.</p></section>
+    <section class="slide"><p>5. You respect my boundaries, and that makes me love you more.</p></section>
+    <section class="slide"><p>6. You make me laugh when I need it the most.</p></section>
+    <section class="slide"><p>7. You’re calm and steady, like a quiet river I want to swim in forever.</p></section>
+    <section class="slide"><p>8. Your smile feels like home.</p></section>
+    <section class="slide"><p>9. You’re passionate about your future, and it inspires me.</p></section>
+    <section class="slide"><p>10. You believe in me, even on days I don't believe in myself.</p></section>
+    <section class="slide"><p>11. You make effort—real, intentional effort—and I see it all.</p></section>
+    <section class="slide"><p>12. You love me out loud and without fear.</p></section>
+    <section class="slide"><p>13. You remember the little things I say, and that means everything.</p></section>
+    <section class="slide"><p>14. You pray with me, and that connection is deep.</p></section>
+    <section class="slide"><p>15. You’re not afraid to talk about your dreams with me.</p></section>
+    <section class="slide"><p>16. You give me butterflies, even on regular days.</p></section>
+    <section class="slide"><p>17. You support my growth and never try to dim my light.</p></section>
+    <section class="slide"><p>18. You’re soft with your love but strong in your commitment.</p></section>
+    <section class="slide"><p>19. You make me feel seen—even when I’m quiet.</p></section>
+    <section class="slide"><p>20. You bring peace into my life.</p></section>
+    <section class="slide"><p>21. You respect women, and I admire the man you are.</p></section>
+    <section class="slide"><p>22. You’re intentional about us—you’re not guessing, you <em>know</em>.</p></section>
+    <section class="slide"><p>23. You make me feel like I’m the most beautiful person alive.</p></section>
+    <section class="slide"><p>24. You’re kind, even when life is hard on you.</p></section>
+    <section class="slide"><p>25. You handle me with care, and I never forget that.</p></section>
+    <section class="slide"><p>26. You’re my safe space.</p></section>
+    <section class="slide"><p>27. You’ve been patient with my healing and understanding of my past.</p></section>
+    <section class="slide"><p>28. You take my heart seriously.</p></section>
+    <section class="slide"><p>29. You bring joy into my ordinary moments.</p></section>
+    <section class="slide"><p>30. You’re a gentle leader, and your strength doesn’t intimidate—it comforts.</p></section>
+    <section class="slide"><p>31. You never make me feel like I have to <em>earn</em> your love.</p></section>
+    <section class="slide"><p>32. You’ve taught me that real love can be soft, steady, and exciting.</p></section>
+    <section class="slide"><p>33. You are my answered prayer, and I thank God for you every day.</p></section>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav">
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+    function showSlide(n) {
+      slides.forEach((s, i) => s.style.display = i === n ? 'flex' : 'none');
+    }
+    document.getElementById('prev').onclick = () => {
+      current = (current === 0) ? slides.length - 1 : current - 1;
+      showSlide(current);
+    };
+    document.getElementById('next').onclick = () => {
+      current = (current === slides.length - 1) ? 0 : current + 1;
+      showSlide(current);
+    };
+    // Initialize
+    showSlide(current);
+  </script>
+
+</body>
+</html>
